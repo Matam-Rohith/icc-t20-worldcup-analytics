@@ -9,12 +9,9 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">
-        🏏 ICC T20 WC 2024 Analytics
-      </a>
+      <a class="navbar-brand fw-bold" href="#">🏏 ICC T20 WC 2024 Analytics</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -30,18 +27,16 @@
     </div>
   </nav>
 
-  <!-- Hero -->
   <section class="hero-section text-center py-5">
     <div class="container">
       <div class="trophy-icon mb-3">🏆</div>
       <h1 class="display-4 fw-bold text-white mb-2">ICC Men's T20 World Cup 2024</h1>
       <p class="lead text-warning mb-1">USA 🇺🇸 & West Indies 🏝️ | June 1–29, 2024</p>
       <p class="text-white-50">20 Teams • 55 Matches • 1 Champion</p>
-      <div class="winner-badge mt-3">🇮🇳 India — World Champions</div>
+      <div class="winner-badge mt-3" id="heroBadge">🏆 Loading Champion...</div>
     </div>
   </section>
 
-  <!-- Summary Cards -->
   <section id="overview" class="py-4">
     <div class="container">
       <h2 class="section-title">📊 Tournament Overview</h2>
@@ -49,7 +44,6 @@
     </div>
   </section>
 
-  <!-- Charts Row -->
   <section class="py-4 bg-dark-section">
     <div class="container">
       <div class="row g-4">
@@ -83,16 +77,44 @@
     </div>
   </section>
 
-  <!-- Batting Stats -->
   <section id="batting" class="py-4">
     <div class="container">
       <h2 class="section-title">🏏 Top Batting Performances</h2>
+      <div class="row g-2 mb-3 align-items-center">
+        <div class="col-md-4">
+          <input type="text" id="batsmenSearch" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="🔍 Search player..." />
+        </div>
+        <div class="col-md-3">
+          <select id="batsmenTeamFilter" class="form-select form-select-sm bg-dark text-white border-secondary">
+            <option value="">All Teams</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select id="batsmenSort" class="form-select form-select-sm bg-dark text-white border-secondary">
+            <option value="runs">Sort by Runs</option>
+            <option value="avg">Sort by Average</option>
+            <option value="sr">Sort by Strike Rate</option>
+            <option value="fifties">Sort by 50s</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-sm btn-outline-warning w-100" onclick="resetBatsmen()">Reset</button>
+        </div>
+      </div>
       <div class="table-responsive">
         <table class="table table-dark table-hover stats-table" id="batsmenTable">
           <thead>
             <tr>
-              <th>#</th><th>Player</th><th>Team</th><th>M</th><th>Inn</th>
-              <th>Runs</th><th>HS</th><th>Avg</th><th>SR</th><th>50s</th>
+              <th>#</th>
+              <th class="sortable" data-col="player">Player <i class="bi bi-arrow-down-up"></i></th>
+              <th>Team</th>
+              <th class="sortable" data-col="matches">M <i class="bi bi-arrow-down-up"></i></th>
+              <th class="sortable" data-col="innings">Inn <i class="bi bi-arrow-down-up"></i></th>
+              <th class="sortable" data-col="runs">Runs <i class="bi bi-arrow-down-up"></i></th>
+              <th>HS</th>
+              <th class="sortable" data-col="avg">Avg <i class="bi bi-arrow-down-up"></i></th>
+              <th class="sortable" data-col="sr">SR <i class="bi bi-arrow-down-up"></i></th>
+              <th class="sortable" data-col="fifties">50s <i class="bi bi-arrow-down-up"></i></th>
             </tr>
           </thead>
           <tbody id="batsmenBody"></tbody>
@@ -101,16 +123,43 @@
     </div>
   </section>
 
-  <!-- Bowling Stats -->
   <section id="bowling" class="py-4 bg-dark-section">
     <div class="container">
       <h2 class="section-title">🎯 Top Bowling Performances</h2>
+      <div class="row g-2 mb-3 align-items-center">
+        <div class="col-md-4">
+          <input type="text" id="bowlersSearch" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="🔍 Search player..." />
+        </div>
+        <div class="col-md-3">
+          <select id="bowlersTeamFilter" class="form-select form-select-sm bg-dark text-white border-secondary">
+            <option value="">All Teams</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select id="bowlersSort" class="form-select form-select-sm bg-dark text-white border-secondary">
+            <option value="wickets">Sort by Wickets</option>
+            <option value="economy">Sort by Economy</option>
+            <option value="avg">Sort by Average</option>
+            <option value="sr">Sort by SR</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-sm btn-outline-warning w-100" onclick="resetBowlers()">Reset</button>
+        </div>
+      </div>
       <div class="table-responsive">
         <table class="table table-dark table-hover stats-table" id="bowlersTable">
           <thead>
             <tr>
-              <th>#</th><th>Player</th><th>Team</th><th>M</th>
-              <th>Wickets</th><th>Best</th><th>Avg</th><th>Econ</th><th>SR</th>
+              <th>#</th>
+              <th class="sortable" data-col="player">Player <i class="bi bi-arrow-down-up"></i></th>
+              <th>Team</th>
+              <th class="sortable" data-col="matches">M <i class="bi bi-arrow-down-up"></i></th>
+              <th class="sortable" data-col="wickets">Wickets <i class="bi bi-arrow-down-up"></i></th>
+              <th>Best</th>
+              <th class="sortable" data-col="avg">Avg <i class="bi bi-arrow-down-up"></i></th>
+              <th class="sortable" data-col="economy">Econ <i class="bi bi-arrow-down-up"></i></th>
+              <th class="sortable" data-col="sr">SR <i class="bi bi-arrow-down-up"></i></th>
             </tr>
           </thead>
           <tbody id="bowlersBody"></tbody>
@@ -119,23 +168,36 @@
     </div>
   </section>
 
-  <!-- Teams -->
   <section id="teams" class="py-4">
     <div class="container">
       <h2 class="section-title">🌍 Team Performance</h2>
+      <div class="mb-3">
+        <input type="text" id="teamsSearch" class="form-control form-control-sm bg-dark text-white border-secondary w-50" placeholder="🔍 Search team..." />
+      </div>
       <div class="row g-3" id="teamsGrid"></div>
     </div>
   </section>
 
-  <!-- Matches -->
   <section id="matches" class="py-4 bg-dark-section">
     <div class="container">
-      <h2 class="section-title">📅 Key Match Results</h2>
+      <h2 class="section-title">📅 Match Results</h2>
+      <div class="row g-2 mb-3 align-items-center">
+        <div class="col-md-4">
+          <input type="text" id="matchesSearch" class="form-control form-control-sm bg-dark text-white border-secondary" placeholder="🔍 Search team or venue..." />
+        </div>
+        <div class="col-md-3">
+          <select id="matchesStageFilter" class="form-select form-select-sm bg-dark text-white border-secondary">
+            <option value="">All Stages</option>
+          </select>
+        </div>
+        <div class="col-md-2">
+          <button class="btn btn-sm btn-outline-warning w-100" onclick="resetMatches()">Reset</button>
+        </div>
+      </div>
       <div class="row g-3" id="matchesGrid"></div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="text-center py-4">
     <p class="mb-1 text-white-50">Built by <a href="https://github.com/Matam-Rohith" class="text-warning">Matam Rohith</a></p>
     <p class="text-white-50 small">Data source: ICC Official • ESPN Cricinfo • 2024</p>
