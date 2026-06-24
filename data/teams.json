@@ -1,0 +1,22 @@
+[
+  { "team": "India", "group": "A", "played": 8, "won": 8, "lost": 0, "nrr": 2.38, "stage": "Winner", "flag": "🇮🇳" },
+  { "team": "South Africa", "group": "D", "played": 8, "won": 6, "lost": 2, "nrr": 2.61, "stage": "Runner-Up", "flag": "🇿🇦" },
+  { "team": "Afghanistan", "group": "C", "played": 7, "won": 5, "lost": 2, "nrr": 3.42, "stage": "Semi-Final", "flag": "🇦🇫" },
+  { "team": "England", "group": "B", "played": 7, "won": 4, "lost": 3, "nrr": 0.15, "stage": "Semi-Final", "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿" },
+  { "team": "Australia", "group": "B", "played": 6, "won": 4, "lost": 2, "nrr": 1.38, "stage": "Super 8", "flag": "🇦🇺" },
+  { "team": "West Indies", "group": "C", "played": 6, "won": 4, "lost": 2, "nrr": 0.52, "stage": "Super 8", "flag": "🏝️" },
+  { "team": "Bangladesh", "group": "D", "played": 6, "won": 3, "lost": 3, "nrr": -0.15, "stage": "Super 8", "flag": "🇧🇩" },
+  { "team": "Pakistan", "group": "A", "played": 4, "won": 1, "lost": 3, "nrr": -1.24, "stage": "Group Stage", "flag": "🇵🇰" },
+  { "team": "New Zealand", "group": "C", "played": 4, "won": 2, "lost": 2, "nrr": 0.43, "stage": "Group Stage", "flag": "🇳🇿" },
+  { "team": "Sri Lanka", "group": "D", "played": 4, "won": 2, "lost": 2, "nrr": -0.15, "stage": "Group Stage", "flag": "🇱🇰" },
+  { "team": "USA", "group": "A", "played": 4, "won": 2, "lost": 2, "nrr": 0.17, "stage": "Group Stage", "flag": "🇺🇸" },
+  { "team": "Ireland", "group": "A", "played": 4, "won": 1, "lost": 3, "nrr": -0.97, "stage": "Group Stage", "flag": "🇮🇪" },
+  { "team": "Scotland", "group": "B", "played": 4, "won": 1, "lost": 3, "nrr": -1.66, "stage": "Group Stage", "flag": "🏴󠁧󠁢󠁳󠁣󠁴󠁿" },
+  { "team": "Namibia", "group": "D", "played": 4, "won": 1, "lost": 3, "nrr": -1.98, "stage": "Group Stage", "flag": "🇳🇦" },
+  { "team": "Netherlands", "group": "C", "played": 4, "won": 1, "lost": 3, "nrr": -2.27, "stage": "Group Stage", "flag": "🇳🇱" },
+  { "team": "Uganda", "group": "A", "played": 4, "won": 0, "lost": 4, "nrr": -5.15, "stage": "Group Stage", "flag": "🇺🇬" },
+  { "team": "PNG", "group": "B", "played": 4, "won": 1, "lost": 3, "nrr": -2.46, "stage": "Group Stage", "flag": "🇵🇬" },
+  { "team": "Canada", "group": "B", "played": 4, "won": 0, "lost": 4, "nrr": -2.82, "stage": "Group Stage", "flag": "🇨🇦" },
+  { "team": "Nepal", "group": "D", "played": 4, "won": 1, "lost": 3, "nrr": -1.24, "stage": "Group Stage", "flag": "🇳🇵" },
+  { "team": "Oman", "group": "A", "played": 4, "won": 0, "lost": 4, "nrr": -3.05, "stage": "Group Stage", "flag": "🇴🇲" }
+]

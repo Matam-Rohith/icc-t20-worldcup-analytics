@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ICC T20 World Cup 2024 Analytics</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="#">
+        🏏 ICC T20 WC 2024 Analytics
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#batting">Batting</a></li>
+          <li class="nav-item"><a class="nav-link" href="#bowling">Bowling</a></li>
+          <li class="nav-item"><a class="nav-link" href="#teams">Teams</a></li>
+          <li class="nav-item"><a class="nav-link" href="#matches">Matches</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-section text-center py-5">
+    <div class="container">
+      <div class="trophy-icon mb-3">🏆</div>
+      <h1 class="display-4 fw-bold text-white mb-2">ICC Men's T20 World Cup 2024</h1>
+      <p class="lead text-warning mb-1">USA 🇺🇸 & West Indies 🏝️ | June 1–29, 2024</p>
+      <p class="text-white-50">20 Teams • 55 Matches • 1 Champion</p>
+      <div class="winner-badge mt-3">🇮🇳 India — World Champions</div>
+    </div>
+  </section>
+
+  <!-- Summary Cards -->
+  <section id="overview" class="py-4">
+    <div class="container">
+      <h2 class="section-title">📊 Tournament Overview</h2>
+      <div class="row g-3" id="summaryCards"></div>
+    </div>
+  </section>
+
+  <!-- Charts Row -->
+  <section class="py-4 bg-dark-section">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card chart-card">
+            <div class="card-header">🏏 Top 10 Run Scorers</div>
+            <div class="card-body"><canvas id="runsChart"></canvas></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card chart-card">
+            <div class="card-header">🎯 Top 10 Wicket Takers</div>
+            <div class="card-body"><canvas id="wicketsChart"></canvas></div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6">
+          <div class="card chart-card">
+            <div class="card-header">📈 Team Win Records</div>
+            <div class="card-body"><canvas id="teamWinsChart"></canvas></div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card chart-card">
+            <div class="card-header">🎪 Stage Breakdown</div>
+            <div class="card-body"><canvas id="stageChart"></canvas></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Batting Stats -->
+  <section id="batting" class="py-4">
+    <div class="container">
+      <h2 class="section-title">🏏 Top Batting Performances</h2>
+      <div class="table-responsive">
+        <table class="table table-dark table-hover stats-table" id="batsmenTable">
+          <thead>
+            <tr>
+              <th>#</th><th>Player</th><th>Team</th><th>M</th><th>Inn</th>
+              <th>Runs</th><th>HS</th><th>Avg</th><th>SR</th><th>50s</th>
+            </tr>
+          </thead>
+          <tbody id="batsmenBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bowling Stats -->
+  <section id="bowling" class="py-4 bg-dark-section">
+    <div class="container">
+      <h2 class="section-title">🎯 Top Bowling Performances</h2>
+      <div class="table-responsive">
+        <table class="table table-dark table-hover stats-table" id="bowlersTable">
+          <thead>
+            <tr>
+              <th>#</th><th>Player</th><th>Team</th><th>M</th>
+              <th>Wickets</th><th>Best</th><th>Avg</th><th>Econ</th><th>SR</th>
+            </tr>
+          </thead>
+          <tbody id="bowlersBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Teams -->
+  <section id="teams" class="py-4">
+    <div class="container">
+      <h2 class="section-title">🌍 Team Performance</h2>
+      <div class="row g-3" id="teamsGrid"></div>
+    </div>
+  </section>
+
+  <!-- Matches -->
+  <section id="matches" class="py-4 bg-dark-section">
+    <div class="container">
+      <h2 class="section-title">📅 Key Match Results</h2>
+      <div class="row g-3" id="matchesGrid"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-4">
+    <p class="mb-1 text-white-50">Built by <a href="https://github.com/Matam-Rohith" class="text-warning">Matam Rohith</a></p>
+    <p class="text-white-50 small">Data source: ICC Official • ESPN Cricinfo • 2024</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
