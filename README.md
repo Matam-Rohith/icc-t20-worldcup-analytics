@@ -1,6 +1,6 @@
 # 🏏 ICC T20 World Cup 2024 Analytics Dashboard
 
-A full-stack web analytics dashboard for the **ICC Men's T20 World Cup 2024**, featuring real match data, interactive charts, player stats, and team performance insights.
+A full-stack web analytics dashboard for the **ICC Men's T20 World Cup 2024**, built from scratch using Node.js, Express, and vanilla JavaScript. Features dynamic REST APIs, live search, team/stage filters, column sorting, and interactive Chart.js visualizations — all powered by manually curated match data sourced from ESPN Cricinfo and ICC official records.
 
 🔗 **Live Demo**: [https://icc-t20-worldcup-analytics.onrender.com](https://icc-t20-worldcup-analytics.onrender.com)
 
@@ -8,13 +8,17 @@ A full-stack web analytics dashboard for the **ICC Men's T20 World Cup 2024**, f
 
 ## 📊 Features
 
-- **Tournament Overview** – Final standings, group stage results
-- **Top Run Scorers** – Batting leaderboard with averages and strike rates
-- **Top Wicket Takers** – Bowling leaderboard with economy and averages
-- **Team Performance** – Win/loss records for all 20 teams
-- **Match Results** – All 55 match results with scores
-- **Interactive Charts** – Bar charts, pie charts using Chart.js
-- **Responsive UI** – Mobile-friendly Bootstrap 5 design
+- **Dynamic REST API** – All stats computed server-side from raw JSON data; no hardcoded values
+- **Live Search** – Search players and teams instantly with 300ms debounce
+- **Team & Stage Filters** – Filter batting, bowling, and match results by team or tournament stage
+- **Click-to-Sort** – Sort any column in batting/bowling tables (ascending/descending toggle)
+- **Tournament Overview** – Summary cards computed dynamically from match data
+- **Top Run Scorers** – Batting leaderboard with averages, strike rates, and 50s
+- **Top Wicket Takers** – Bowling leaderboard with economy, averages, and best figures
+- **Team Performance** – Win/loss records and win % for all 20 teams with progress bars
+- **Match Results** – All 55 match results filterable by stage
+- **Interactive Charts** – Bar charts (runs, wickets, team wins), doughnut chart (stage breakdown)
+- **Responsive UI** – Mobile-friendly Bootstrap 5 dark theme
 
 ---
 
@@ -22,9 +26,9 @@ A full-stack web analytics dashboard for the **ICC Men's T20 World Cup 2024**, f
 
 | Layer | Technology |
 |-------|------------|
-| Frontend | HTML5, CSS3, JavaScript, Bootstrap 5, Chart.js |
+| Frontend | HTML5, CSS3, JavaScript (Vanilla), Bootstrap 5, Chart.js |
 | Backend | Node.js, Express.js |
-| Data | JSON (real ICC T20 WC 2024 data) |
+| Data | JSON – manually sourced from ESPN Cricinfo & ICC official records |
 | Hosting | Render.com |
 
 ---
@@ -46,28 +50,40 @@ Open `http://localhost:3000`
 
 ```
 icc-t20-worldcup-analytics/
-├── server.js          # Express server
+├── server.js           # Express server with dynamic API routes
 ├── package.json
+├── render.yaml         # Render.com deployment config
 ├── data/
-│   ├── batsmen.json   # Top run scorers
-│   ├── bowlers.json   # Top wicket takers
-│   ├── teams.json     # Team records
-│   └── matches.json   # All match results
+│   ├── batsmen.json    # Top run scorers (sourced: ESPN Cricinfo)
+│   ├── bowlers.json    # Top wicket takers (sourced: ESPN Cricinfo)
+│   ├── teams.json      # Team records & group standings
+│   └── matches.json    # All 55 match results
 └── public/
-    ├── index.html     # Main dashboard
-    ├── style.css
-    └── app.js         # Frontend JS + Charts
+    ├── index.html      # Main dashboard layout
+    ├── style.css       # Custom dark theme styles
+    └── app.js          # Frontend logic, fetch calls, charts
 ```
+
+---
+
+## 📝 How It Works
+
+The backend reads raw JSON data files and **computes all statistics dynamically** on each API request:
+- Top batsman and bowler are determined by sorting at request time
+- Tournament winner and runner-up are derived from the matches data
+- Team win/loss records are aggregated from individual match results
+- All API routes support query parameters: `?search=`, `?team=`, `?sortBy=`, `?order=`, `?stage=`
 
 ---
 
 ## 📅 Tournament Info
 
 - **Dates**: June 1–29, 2024
-- **Hosts**: USA 🇺🇸 & West Indies 🇼🇮
+- **Hosts**: USA 🇺🇸 & West Indies 🏝️
 - **Teams**: 20
 - **Matches**: 55
 - **Winner**: 🇮🇳 India (beat South Africa by 7 runs in the final)
+- **Data Source**: ESPN Cricinfo, ICC Official Records
 
 ---
 

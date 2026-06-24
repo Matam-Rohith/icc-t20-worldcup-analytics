@@ -1,12 +1,12 @@
 [
-  { "rank": 1, "player": "Rahmanullah Gurbaz", "team": "Afghanistan", "matches": 8, "innings": 8, "runs": 281, "highScore": 80, "average": 40.14, "strikeRate": 148.68, "fifties": 3, "hundreds": 0 },
+  { "rank": 1, "player": "Rahmanullah Gurbaz", "team": "Afghanistan", "matches": 8, "innings": 8, "runs": 281, "highScore": 80, "average": 35.12, "strikeRate": 124.34, "fifties": 3, "hundreds": 0 },
   { "rank": 2, "player": "Rohit Sharma", "team": "India", "matches": 8, "innings": 8, "runs": 257, "highScore": 92, "average": 36.71, "strikeRate": 156.71, "fifties": 1, "hundreds": 0 },
-  { "rank": 3, "player": "Nicholas Pooran", "team": "West Indies", "matches": 7, "innings": 7, "runs": 228, "highScore": 98, "average": 38.00, "strikeRate": 163.31, "fifties": 2, "hundreds": 0 },
-  { "rank": 4, "player": "Virat Kohli", "team": "India", "matches": 8, "innings": 8, "runs": 151, "highScore": 76, "average": 25.17, "strikeRate": 116.03, "fifties": 1, "hundreds": 0 },
-  { "rank": 5, "player": "Quinton de Kock", "team": "South Africa", "matches": 8, "innings": 8, "runs": 247, "highScore": 74, "average": 35.29, "strikeRate": 145.88, "fifties": 3, "hundreds": 0 },
-  { "rank": 6, "player": "Travis Head", "team": "Australia", "matches": 6, "innings": 6, "runs": 255, "highScore": 76, "average": 51.00, "strikeRate": 175.86, "fifties": 3, "hundreds": 0 },
+  { "rank": 3, "player": "Travis Head", "team": "Australia", "matches": 6, "innings": 6, "runs": 255, "highScore": 76, "average": 51.00, "strikeRate": 175.86, "fifties": 3, "hundreds": 0 },
+  { "rank": 4, "player": "Quinton de Kock", "team": "South Africa", "matches": 8, "innings": 8, "runs": 247, "highScore": 74, "average": 35.29, "strikeRate": 145.88, "fifties": 3, "hundreds": 0 },
+  { "rank": 5, "player": "Reeza Hendricks", "team": "South Africa", "matches": 8, "innings": 8, "runs": 222, "highScore": 62, "average": 27.75, "strikeRate": 137.89, "fifties": 2, "hundreds": 0 },
+  { "rank": 6, "player": "Azmatullah Omarzai", "team": "Afghanistan", "matches": 8, "innings": 7, "runs": 216, "highScore": 97, "average": 36.00, "strikeRate": 145.95, "fifties": 1, "hundreds": 0 },
   { "rank": 7, "player": "Suryakumar Yadav", "team": "India", "matches": 8, "innings": 7, "runs": 199, "highScore": 53, "average": 39.80, "strikeRate": 172.17, "fifties": 2, "hundreds": 0 },
-  { "rank": 8, "player": "Azmatullah Omarzai", "team": "Afghanistan", "matches": 8, "innings": 7, "runs": 216, "highScore": 97, "average": 36.00, "strikeRate": 145.95, "fifties": 1, "hundreds": 0 },
-  { "rank": 9, "player": "Reeza Hendricks", "team": "South Africa", "matches": 8, "innings": 8, "runs": 222, "highScore": 62, "average": 27.75, "strikeRate": 137.89, "fifties": 2, "hundreds": 0 },
-  { "rank": 10, "player": "Aiden Markram", "team": "South Africa", "matches": 8, "innings": 8, "runs": 202, "highScore": 68, "average": 28.86, "strikeRate": 151.88, "fifties": 2, "hundreds": 0 }
+  { "rank": 8, "player": "Aiden Markram", "team": "South Africa", "matches": 8, "innings": 8, "runs": 202, "highScore": 68, "average": 28.86, "strikeRate": 151.88, "fifties": 2, "hundreds": 0 },
+  { "rank": 9, "player": "Virat Kohli", "team": "India", "matches": 8, "innings": 8, "runs": 319, "highScore": 76, "average": 45.57, "strikeRate": 134.60, "fifties": 3, "hundreds": 0 },
+  { "rank": 10, "player": "Nicholas Pooran", "team": "West Indies", "matches": 7, "innings": 7, "runs": 228, "highScore": 98, "average": 38.00, "strikeRate": 163.31, "fifties": 2, "hundreds": 0 }
 ]
